@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HAPPY INDEPENDENCE DAY</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #000;
+			height: 100vh;
+		}
+		.flag{
+			position: relative;
+			overflow: hidden;
+			filter: brightness(200%);
+		}
+		.text{
+			background: #000;
+			color: #fff;
+			font-size: 50px;
+			font-weight: bold;
+			font-family: sans-serif;
+			text-transform: uppercase;
+			position: relative;
+			user-select: none;
+
+		}
+		.text-t{
+			background: #000;
+			color: #fff;
+			font-size: 30px;
+			font-weight: bold;
+			font-family: sans-serif;
+			text-transform: uppercase;
+			position: relative;
+			user-select: none;
+			background: linear-gradient(45deg,red,gold,lightgreen,gold,red);
+		}
+		.text::before{
+content: attr(data-text);
+position: absolute;
+color: #fff;
+filter: blur(0.02em);
+mix-blend-mode:difference ;
+		}
+		.gradient{
+			position: absolute;
+			background: linear-gradient(45deg,red,gold,lightgreen,gold,red);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			mix-blend-mode: multiply;
+		}
+		.spotlight{
+			position: absolute;
+			top: -100%;
+			left: -100%;
+			right: 0;
+			bottom: 0;
+			background: radial-gradient(circle,white,transparent 25%)center/25%25%,radial-gradient(circle,white,black 25%)center/12.5% 12.5%;
+			animation: light 5s linear infinite;
+			mix-blend-mode: color-dodge;
+		}
+		@keyframes light{
+			to{
+				transform: translate(50%,50%);
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<span class="text-t">आन देश की शान देश की,<br>देश की हम संतान हैं,<br>तीन रंगों से रंगा तिरंगा,<br>अपनी ये पहचान है।</span>
+	</div>
+	<div class="flag">
+	<span class="text" data-text="happy 75th independence day"> happy 75th independence day</span>
+	<span class="gradient"></span>
+	<span class="spotlight"></span>
+</div>
+</body>
+</html>
